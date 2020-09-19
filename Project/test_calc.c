@@ -44,20 +44,27 @@ int main() {
 /* Write all the test functions */ 
 void test_add(void) {
   CU_ASSERT(30 == add(10, 20));
-  
+  CU_ASSERT(-20 == add(-10,-10));
+   CU_ASSERT(740 == add(750,-10));
   /* Dummy fail*/
   CU_ASSERT(1500 == add(750, 7500));
+  
+   
 }
+
 
 void test_subtract(void) {
   CU_ASSERT(-3 == subtract(0, 3));
   
+  CU_ASSERT(33 == subtract(0, -33));
+
   /* Dummy fail*/
   CU_ASSERT(1 == subtract(1000, 900));
-}
+   }
 
 void test_multiply(void) {
   CU_ASSERT(0 == multiply(1, 0));
+  CU_ASSERT(50 == multiply(1, 50));
   
   /* Dummy fail*/
   CU_ASSERT(2 == multiply(2, 5));
